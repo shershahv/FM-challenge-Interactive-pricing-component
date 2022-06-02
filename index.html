@@ -13,6 +13,7 @@
     />
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="./app.js" defer></script>
     <title>Frontend Mentor | Interactive pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -40,19 +41,23 @@
       <div class="main-content-box">
         <!-- price container -->
         <div class="price-box">
-          <h4>100K PAGEVIEWS</h4>
+          <h4 id="views">100K PAGEVIEWS</h4>
           <div>
             <h1 id="price">$16.00 <span>/month</span></h1>
           </div>
         </div>
-        <input type="range" name="price" class="price-range" min="8" max="36">
+        <input type="range" name="price" class="price-range" min="8" max="36" value="16">
         <!-- price billing and discount section -->
-        <div class="billing">
+        
           <div class="monthly-biiling-box">
             <label for="monthly-billing">Monthly Billing</label>
-            <input type="checkbox" name="" id="monthly-billing">
-            <label for="monthly-billing">Yearly Billing <span>25% discount</span></label>
-          </div>
+           <!-- toggle switch -->
+            <label for="monthly-billing" class="switch">
+              <input type="checkbox" name="" id="monthly-billing" >
+              <span class="slider"></span>
+            </label>
+            <label for="monthly-billing" id="discount-label">Yearly Billing <span>25% discount</span></label>
+          
         </div>
       </div>
 
