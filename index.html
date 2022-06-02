@@ -11,7 +11,8 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <title>Frontend Mentor | Interactive pricing component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,32 +27,70 @@
     </style>
   </head>
   <body>
-    <main>
+    <header>
+      <!-- title area -->
       <div class="title-box">
         <h1>Simple, traffic-based pricing</h1>
         <p>Sign-up for our 30-day trial. No credit card required.</p>
       </div>
-
+    </header>
+    <main> 
+      
+      <!-- container for main content fo the page -->
       <div class="main-content-box">
+        <!-- price container -->
         <div class="price-box">
           <h4>100K PAGEVIEWS</h4>
           <div>
-            <h1 id="price">$16.00</h1><span>/month</span>
+            <h1 id="price">$16.00 <span>/month</span></h1>
           </div>
         </div>
-        <input type="range" name="price" id="price-range" min="0" max="100">
-        
+        <input type="range" name="price" class="price-range" min="8" max="36">
+        <!-- price billing and discount section -->
+        <div class="billing">
+          <div class="monthly-biiling-box">
+            <label for="monthly-billing">Monthly Billing</label>
+            <input type="checkbox" name="" id="monthly-billing">
+            <label for="monthly-billing">Yearly Billing <span>25% discount</span></label>
+          </div>
+        </div>
       </div>
+
+      <!-- features section -->
+      <section>
+      
+        <div class="feature-list">
+          <ul>
+            <li>
+              <img src="./images/icon-check.svg" alt="">
+              Unlimited websites
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="">
+              100% data ownership
+            </li>
+            <li>
+              <img src="./images/icon-check.svg" alt="">
+              Email reports
+            </li>
+          </ul>
+        </div>
+        <div class="call-to-action-box"> 
+          <button>Start my trial</button>
+        </div>
+      </section>
     </main>
 
-    Pageviews $ /month Monthly Billing Yearly Billing 25% discount Unlimited
-    websites 100% data ownership Email reports Start my trial
+    
 
-    <div class="attribution">
+    <!-- Pageviews $ /month Monthly Billing Yearly Billing 25% discount Unlimited
+    websites 100% data ownership Email reports Start my trial -->
+
+    <!-- <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </footer> -->
   </body>
 </html>
