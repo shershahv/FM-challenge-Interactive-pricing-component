@@ -4,6 +4,7 @@ const viewsCount = document.querySelector('#views');
 const monthlyBilling = document.querySelector('#monthly-billing');
 
 sliderBar.oninput = sliderUI; // oninput : triggers everytime the value changes
+monthlyBilling.onclick = priceHandler; // when toggle is clicked it will display discounted values
 
 
 
@@ -13,7 +14,7 @@ function priceHandler () {
   if(!monthlyBilling.checked){
     priceAmount.innerHTML= `${parseFloat(value).toFixed(2)} <span>/month`;
   }else {
-    priceAmount.innerHTML= `${parseFloat(value - discount) } <span>/month`;
+    priceAmount.innerHTML= `${parseFloat(value - discount).toFixed(2) } <span>/month`;
 
   }
 
